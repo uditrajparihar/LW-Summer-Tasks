@@ -1,0 +1,24 @@
+import  cv2
+import numpy  as np
+
+img1 = cv2.imread('collage-1.jpg')
+
+img2 = cv2.imread('collage-2.jpg')
+
+img1.shape
+
+img2.shape
+
+fimg1 =  cv2.resize(img1 , (259,180))
+
+fimg2 = cv2.resize(img2 , (259,180))
+
+fimg1.shape
+
+fimg2.shape
+
+collage  =  np.hstack([fimg1 , fimg2])
+
+cv2.imshow('myimage' ,collage)
+cv2.waitKey()==15
+cv2.destroyAllWindows()
