@@ -1,0 +1,27 @@
+import cv2
+
+imgraw = cv2.imread('swap-image-faces.jpg')
+
+# = cv2.imread('swap-image-faces.jpg')
+
+imgraw.shape
+
+white = imgraw[  12:170 , 60:215]
+
+black = imgraw[12:170 , 345:500]
+
+imgraw[  12:170 , 60:215] = f_black
+
+imgraw[12:170 , 345:500] = f_white
+
+cv2.imshow("my image"  , imgraw)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+import numpy as np
+
+f_white =  np.array(white)
+
+f_black =  np.array(black)
+
